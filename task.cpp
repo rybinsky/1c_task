@@ -14,7 +14,7 @@ struct Edge {
 	int dst; // куда
 };
 
-// процедура поиска пути
+// поиск путей
 void Searching(const int nStations, const vector<Edge>& edges, vector<int>& minTime, vector<pair<int, int>>& minTstations) {
 	for (int i = 1; i < nStations; i++) {
 		for (const Edge& edge : edges) {
@@ -35,7 +35,7 @@ void GenTimeTable(const int countTrains, vector<Edge>& edges) {
 
 		int countStations, rangeT, startTime; // число станций на пути и интервал выхода из депо, когда выйдет впервые
 		cin >> countStations >> rangeT >> startTime;
-		int countTrains = (maxT - startTime) / rangeT; // сколько всего выйдет поездов за сутки из депо
+		int countTrains = (maxT - startTime) / rangeT; // сколько всего выйдет поездов за оставшиеся сутки из депо
 		int time = startTime;
 		int prevSt, prev_to_curT; 
 		cin >> prevSt; // вводим первую станцию на ветке
@@ -49,7 +49,6 @@ void GenTimeTable(const int countTrains, vector<Edge>& edges) {
 			time += prev_to_curT;
 			prevSt = curSt; 
 		}
-		
 	}
 }
 
@@ -106,7 +105,6 @@ int main() {
 			}
 		}
 		cout << route.back().first << ", coming out!" << endl;
-		
 	}
 	return 0;
 }
