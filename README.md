@@ -69,4 +69,71 @@ Your route:
 
 Вывод: время и маршрут, сначала садимся, затем где едем дальше, где выходим и ждем следующего поезда на следующую станцию, и где выходим.
 
+Еще примеры запросов и корректных выводов:
+
+8 4 1
+
+Minimal time: 3
+
+Your route:
+
+8, please, wait 1 minutes
+
+6, keep going
+
+4, coming out!
+
+8 4 0
+
+Minimal time: 2
+
+Your route:
+
+8, keep going
+
+6, keep going
+
+4, coming out!
+
+8 4 2
+
+Minimal time: 2
+
+Your route:
+
+8, keep going
+
+6, keep going
+
+4, coming out!
+
+8 4 1439
+
+You can't get to the station 4 from the station 8 by metro
+
+8 4 1438
+
+Minimal time: 2
+
+Your route:
+
+8, keep going
+
+6, keep going
+
+4, coming out!
+
+7 3 0
+
+Minimal time: 6
+
+Your route:
+
+7, keep going
+
+3, coming out!
+
+
+
+
 
